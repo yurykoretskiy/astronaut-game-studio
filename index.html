@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Astronaut — Chapter 1 Overview, What's Done & Screenshot Tutorial</title>
+  <style>
+    :root {
+      --bg: #0b101b;
+      --panel: #121a2a;
+      --panel-2: #182338;
+      --border: #273754;
+      --text: #eef3fb;
+      --muted: #96a8c8;
+      --accent: #f59e0b;
+      --accent-2: #38bdf8;
+      --ok: #22c55e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; padding: 0; background: var(--bg); color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.55;
+    }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 28px 20px 64px; }
+    .hero {
+      background: linear-gradient(135deg, #111c33 0%, #1a2744 100%);
+      border: 1.5px solid var(--accent-2); border-radius: 16px;
+      padding: 28px; margin-bottom: 28px;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.45);
+    }
+    .badge {
+      display: inline-block; font-size: 11px; font-weight: 800; text-transform: uppercase;
+      letter-spacing: 0.08em; padding: 4px 10px; border-radius: 99px;
+      background: rgba(56, 189, 248, 0.15); color: var(--accent-2); border: 1px solid rgba(56, 189, 248, 0.4);
+      margin-bottom: 10px;
+    }
+    h1 { margin: 0 0 10px; font-size: 28px; }
+    h2 { margin: 32px 0 14px; font-size: 21px; color: #fff; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+    h3 { margin: 0 0 8px; font-size: 16px; color: var(--accent-2); }
+    p { margin: 0 0 12px; color: #dbe7f7; }
+    .cta-row { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 18px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 22px; border-radius: 10px; font-weight: 700; font-size: 15px;
+      text-decoration: none; color: #fff; background: var(--panel-2); border: 1.5px solid var(--border);
+      transition: transform 0.12s, border-color 0.15s;
+    }
+    .btn:hover { transform: translateY(-2px); border-color: var(--accent); }
+    .btn.primary { background: #1d4ed8; border-color: #3b82f6; box-shadow: 0 6px 20px rgba(29,78,216,0.45); }
+    .btn.studio { background: #b45309; border-color: var(--accent); box-shadow: 0 6px 20px rgba(180,83,9,0.35); }
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; }
+    .card {
+      background: var(--panel); border: 1px solid var(--border); border-radius: 12px;
+      padding: 18px;
+    }
+    .card ul { margin: 8px 0 0; padding-left: 18px; color: #cbd5e1; }
+    .card li { margin-bottom: 6px; }
+    .step-card {
+      background: var(--panel); border: 1px solid var(--border); border-radius: 14px;
+      padding: 20px; margin-bottom: 20px;
+    }
+    .step-head { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+    .step-num {
+      background: var(--accent); color: #090d16; font-weight: 800; font-size: 12px;
+      padding: 3px 10px; border-radius: 99px;
+    }
+    .shot-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 14px; margin-top: 12px; }
+    .shot-box {
+      background: #070b13; border: 1px solid #1e293b; border-radius: 10px; overflow: hidden;
+    }
+    .shot-box img { width: 100%; display: block; }
+    .shot-cap { padding: 8px 12px; font-size: 12px; color: var(--muted); border-top: 1px solid #1e293b; }
+    code { background: #1e293b; padding: 2px 6px; border-radius: 5px; font-size: 13px; color: #93c5fd; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <span class="badge">🚀 Astronaut Fork v3 · Full 5-Mission Chapter 1 + Control Studio</span>
+      <h1>Astronaut — English Adventure Game &amp; Visual Production Studio</h1>
+      <p>
+        Help <strong>Captain Alex Reed</strong> and his robotic co-pilot <strong>Robodog (Apollo Scout)</strong>
+        survive a crash landing on an unknown alien planet across <strong>5 interactive missions (42 steps)</strong>
+        and <strong>5 post-mission narrative cutscenes</strong>—or open the <strong>Control Studio</strong> to explore
+        the 2-level mission flowcharts, swap character &amp; biome art across scenes, and browse all 802 project images.
+      </p>
+      <div class="cta-row">
+        <a class="btn primary" href="game.html">▶ Play Standalone Game (game.html)</a>
+        <a class="btn studio" href="studio.html">🎛️ Open Control Studio (studio.html)</a>
+      </div>
+    </section>
+
+    <h2>✨ What Is Done &amp; What Was Added</h2>
+    <div class="grid-2">
+      <div class="card">
+        <h3>🕹️ Complete 5-Mission Playable Campaign</h3>
+        <ul>
+          <li><strong>13-Beat 2.5D Color Comic Intro:</strong> Full-color widescreen story panels matched to every beat (leaving Earth, Robodog co-piloting, asteroid storm, crash landing, low oxygen/power, and workbench prep).</li>
+          <li><strong>M1 · Wake Robodog (Repair · 12 steps):</strong> Robodog lying on the workbench with open chest bay, vertical tool tray, battery swap, live draggable sagging Bezier cables, and glowing cyan ring-eye wake-up payoff.</li>
+          <li><strong>M2 · Salvage the Camp (Fetch · 7 steps):</strong> Command Robodog to dash and retrieve 7 survival supplies in the red canyon.</li>
+          <li><strong>M3 · Fauna Survey (Scan · 10 steps):</strong> Laser-scan 6 animated alien creatures (with full sky/lake patrol loops) into the <strong>Field Journal</strong>.</li>
+          <li><strong>M4 · Ship Core Black Box (Terminal · 8 steps):</strong> Reconstruct Captain Reed's Ship's Log inside the fitted CRT monitor bezel with a docked word-bank keypad.</li>
+          <li><strong>M5 · Mountain Rescue Beacon (Template Proof · 5 steps):</strong> Power up the summit radio dish under the aurora sky and establish orbit rescue contact—built 100% from a declarative JSON template with 0 engine code edits.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>🎛️ Control Studio &amp; Learning Upgrades (Fork v3)</h3>
+        <ul>
+          <li><strong>3-Mode Smart Label System:</strong> Cycles between <code>🎯 Smart (Learn)</code> (hides item text spoilers until hovered, clicked, or 3x-mistake gold hint glow), <code>🎓 Study (On Mistake)</code>, and <code>🔧 All On</code>.</li>
+          <li><strong>Level-1 Auto-Fit Snake Flowchart:</strong> 12 campaign nodes with live scene thumbnails, clean directional arrows, and auto-fit to viewport (<code>⊡ Fit</code>).</li>
+          <li><strong>Level-2 Multi-Row Mission Flowchart:</strong> Double-click any mission to inspect all steps, green <code>✓ Expected</code> targets, red clickable <code>✕ Distractor</code> test branches, and inline <code>+ Note</code> buttons.</li>
+          <li><strong>🪪 Style &amp; Character Cards:</strong> Top-level cards for <em>Captain Alex Reed</em>, <em>Robodog (Apollo Scout)</em>, <em>Apollo Scout Rocket</em>, and <em>4 Planet Biomes</em> with 1-click variant propagation across all scenes.</li>
+          <li><strong>📚 Full 802-Image Provenance Library:</strong> Searchable catalog of all 802 unique SHA-256 images across 1,569 files with maker/model filters and live slot assignment.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>📸 Short Screenshot Tutorial: How to Use It</h2>
+
+    <div class="step-card">
+      <div class="step-head">
+        <span class="step-num">STEP 1</span>
+        <h3>Start the Intro Story &amp; Choose Your Label / Audio Mode</h3>
+      </div>
+      <p>
+        Click <strong><a href="game.html" style="color:#38bdf8;">▶ Play Standalone Game</a></strong>.
+        Step through the 13 illustrated crash story beats with <strong>Next</strong>. In the top bar, toggle
+        <code>🔇 Sound: Off / 🔊 Sound: On</code> for background music &amp; voiceovers, or click
+        <code>🎯 Labels: Smart (Learn)</code> to switch between spoiler-free English learning mode and developer labels.
+      </p>
+      <div class="shot-grid">
+        <div class="shot-box">
+          <img src="tutorial/01_intro_story.png" alt="Intro Story Beat 3 — Robodog Co-Pilot">
+          <div class="shot-cap">Intro Beat 3: Chibi Captain Alex Reed &amp; ring-eye Apollo Scout Robodog in the cockpit.</div>
+        </div>
+        <div class="shot-box">
+          <img src="tutorial/02_intro_crash.png" alt="Intro Story Beat 9 — Crashed Ship & Broken Robodog">
+          <div class="shot-cap">Intro Beat 9: Crashed Apollo Scout rocket and offline Robodog in the red rocky canyon.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-head">
+        <span class="step-num">STEP 2</span>
+        <h3>Mission 1: Repair Robodog on the Workbench (Click or Drag Live Cables!)</h3>
+      </div>
+      <p>
+        Select <strong>Crash Site → Wake Robodog</strong> on the Planet Map. Read Captain Reed's English commands in the
+        bottom dialogue strip: pick up the screwdriver from the left tray, unscrew the 4 corner screws, open Robodog's chest cover,
+        swap the old and new batteries, and <strong>drag each colored wire (red, blue, yellow, green) to its matching directional socket</strong>
+        (or click the wire, then click the socket). If you make 3 wrong clicks, the target glows gold to help you!
+      </p>
+      <div class="shot-grid">
+        <div class="shot-box">
+          <img src="tutorial/03_m1_workbench.png" alt="Mission 1 Lying-Robodog Workbench">
+          <div class="shot-cap">Mission 1: Robodog lying on the repair workbench with live sagging SVG Bezier cables and 4-LED circuit bar.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-head">
+        <span class="step-num">STEP 3</span>
+        <h3>Missions 4 &amp; 5: Reconstruct the Ship's Log &amp; Transmit the Rescue Signal</h3>
+      </div>
+      <p>
+        In <strong>Mission 4 (Black Box)</strong> and <strong>Mission 5 (Mountain Beacon)</strong>, read the sentence inside the
+        dark cockpit/holo screen bezel and click the missing English words from the <strong>docked word-bank keypad</strong> at the bottom.
+        Check your learned vocabulary anytime in <code>📖 Wordbook</code> or inspect scanned alien wildlife in <code>🔬 Field Journal</code>.
+      </p>
+      <div class="shot-grid">
+        <div class="shot-box">
+          <img src="tutorial/04_m4_terminal.png" alt="Mission 4 Ship Core Terminal">
+          <div class="shot-cap">Mission 4: Fitted CRT monitor bezel with glowing cyan phosphor text and bottom-docked word bank.</div>
+        </div>
+        <div class="shot-box">
+          <img src="tutorial/05_m5_mountains.png" alt="Mission 5 Mountain Rescue Beacon">
+          <div class="shot-cap">Mission 5: Clean character-free mountain summit backdrop with live Captain Reed &amp; Robodog sprites.</div>
+        </div>
+        <div class="shot-box">
+          <img src="tutorial/06_rescue_finale.png" alt="Chapter 1 Rescue Finale">
+          <div class="shot-cap">Transition T5 (Chapter 1 Finale): Rescue ship arriving over the aurora mountain beacon.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-head">
+        <span class="step-num">STEP 4</span>
+        <h3>Control Studio: Explore the 2-Level Flowchart &amp; Test Wrong-Click Branches</h3>
+      </div>
+      <p>
+        Open <strong><a href="studio.html" style="color:#f59e0b;">🎛️ Control Studio (studio.html)</a></strong>.
+        The left pane shows the <strong>Level-1 Whole Game Snake Flowchart</strong> (12 nodes). Click any node to jump the live game stage
+        to that scene, or <strong>double-click any mission node</strong> to drill down into its <strong>Level-2 Step Flowchart</strong>—complete
+        with green expected targets, red clickable distractor branches, and inline <code>+ Note</code> buttons.
+      </p>
+      <div class="shot-grid">
+        <div class="shot-box">
+          <img src="tutorial/07_studio_level1.png" alt="Control Studio Level 1 Snake Flowchart">
+          <div class="shot-cap">Level 1: Auto-fitted 12-node campaign snake flow on the left + live playable Mission 2 stage on the right.</div>
+        </div>
+        <div class="shot-box">
+          <img src="tutorial/08_studio_level2.png" alt="Control Studio Level 2 Mission Flowchart">
+          <div class="shot-cap">Level 2: Multi-row Mission 1 step flowchart with Expected targets, Distractor test buttons, and +Note.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-head">
+        <span class="step-num">STEP 5</span>
+        <h3>Use Style &amp; Character Cards and Browse the Full 802-Image Library</h3>
+      </div>
+      <p>
+        Use the bottom Control Studio tabs to switch between <code>🧭 Step Guide &amp; QA</code> (run the 9,754-state BFS verifier in 1 click),
+        <code>🪪 Style &amp; Character Cards</code> (propagate a character or biome variant across every scene at once),
+        <code>🎨 Slot &amp; Provenance Studio</code> (A/B compare and approve/reject slot candidates), and
+        <code>📚 Full 717+ Image Library</code> (search all 802 unique SHA-256 images by maker, model, or filename).
+      </p>
+      <div class="shot-grid">
+        <div class="shot-box">
+          <img src="tutorial/09_studio_style_cards.png" alt="Style and Character Cards Tab">
+          <div class="shot-cap">Style &amp; Character Portfolio Cards with locked visual rules and cross-scene slot chips.</div>
+        </div>
+        <div class="shot-box">
+          <img src="tutorial/10_studio_library.png" alt="Full 802 Image Library Browser">
+          <div class="shot-cap">Full 802-Image Library Browser with maker filters (ALL, CODEX, ANTIGRAVITY, KIE-SEEDREAM, HERMES).</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

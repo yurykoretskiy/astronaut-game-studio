@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Astronaut — Full Chapter 1 Game (5 Missions · Fork v2)</title>
+  <link rel="stylesheet" href="game.css">
+</head>
+<body class="play-page">
+  <div class="play-topbar">
+    <div class="brand">🚀 ASTRONAUT — CHAPTER 1 (5 MISSIONS)</div>
+    <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+      <button type="button" id="btn-sound-toggle">🔇 Sound: Off</button>
+      <button type="button" id="btn-challenge-mode" title="Hide item labels to practice reading English">🎯 Labels: On</button>
+      <button type="button" id="btn-wordbook">📖 Wordbook</button>
+      <button type="button" id="btn-journal">🔬 Field Journal</button>
+      <button type="button" onclick="window.FORK_GAME.reset()">↺ Restart</button>
+      <a href="studio.html" style="color:#38bdf8;text-decoration:none;font-size:12px;margin-left:4px;">Control Studio ↗</a>
+    </div>
+  </div>
+  <div id="game-shell"><div id="game"></div></div>
+  <div class="modal-backdrop" id="drawer-modal">
+    <div class="modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+        <strong id="drawer-title">Drawer</strong>
+        <button type="button" id="drawer-close">Close</button>
+      </div>
+      <div id="drawer-content"></div>
+    </div>
+  </div>
+  <script src="game-data.js"></script>
+  <script src="engine-claude.js"></script>
+  <script src="dynamics.js"></script>
+  <script src="view.js"></script>
+  <script>window.FORK_GAME.init();</script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Astronaut Game Dev Platform & Control Studio (Fork v2)</title>
+  <link rel="stylesheet" href="game.css">
+</head>
+<body class="studio-page">
+  <header class="studio-header">
+    <div class="left">
+      <span class="title">🚀 ASTRONAUT PLATFORM · CONTROL STUDIO (5 MISSIONS)</span>
+      <span class="pill">Branch: astronaut-fork-v1</span>
+      <span class="pill">0 Auto-Approvals</span>
+    </div>
+    <div class="right">
+      <button type="button" id="btn-sound-toggle">🔇 Sound: Off</button>
+      <button type="button" id="btn-challenge-mode" title="Hide item labels to practice reading English">🎯 Labels: On</button>
+      <button type="button" id="btn-wordbook">📖 Wordbook</button>
+      <button type="button" id="btn-box-mode">Wireframe / Box</button>
+      <button type="button" id="btn-layout-edit" title="Drag items on stage to reposition">📐 Drag-to-Place: Off</button>
+      <button type="button" id="btn-reset-game">Reset</button>
+      <a href="game.html" target="_blank"><button type="button" class="primary">▶ Play-Only game.html</button></a>
+    </div>
+  </header>
+
+  <main class="studio-main">
+    <section class="canvas-pane">
+      <div class="canvas-toolbar">
+        <span id="canvas-crumb" style="font-size:12px;font-weight:700;color:#e2e8f0;">Whole Game</span>
+        <div style="display:flex;gap:4px;">
+          <button type="button" id="btn-level-whole" style="min-height:28px;padding:2px 8px;font-size:11px;">Whole Game</button>
+          <button type="button" id="btn-zoom-fit" style="min-height:28px;padding:2px 8px;font-size:11px;" title="Auto-fit flowchart to viewport">⊡ Fit</button>
+          <button type="button" id="btn-zoom-out" style="min-height:28px;padding:2px 8px;font-size:11px;">−</button>
+          <button type="button" id="btn-zoom-reset" style="min-height:28px;padding:2px 8px;font-size:11px;">100%</button>
+          <button type="button" id="btn-zoom-in" style="min-height:28px;padding:2px 8px;font-size:11px;">+</button>
+        </div>
+      </div>
+      <div class="canvas-viewport" id="canvas-viewport">
+        <div class="canvas-world" id="canvas-world"></div>
+      </div>
+    </section>
+
+    <section class="stage-pane">
+      <div id="game"></div>
+    </section>
+  </main>
+
+  <section class="studio-deck">
+    <div class="deck-tabs">
+      <button type="button" data-tab="guide" class="active">🧭 Step Guide & QA</button>
+      <button type="button" data-tab="cards">🪪 Style & Character Cards</button>
+      <button type="button" data-tab="slots">🎨 Slot & Provenance Studio</button>
+      <button type="button" data-tab="library">📚 Full 717+ Image Library</button>
+      <button type="button" data-tab="notes">📝 Gaps & Idea Notes</button>
+      <button type="button" data-tab="template">🧩 Mission Template (M5 Proof)</button>
+      <button type="button" data-tab="spec">📚 Fork Decisions</button>
+    </div>
+    <div class="deck-body" id="deck-body"></div>
+  </section>
+
+  <div class="modal-backdrop" id="compare-modal">
+    <div class="modal-box">
+      <div style="display:flex;justify-content:flex-end;">
+        <button type="button" id="compare-close">Close</button>
+      </div>
+      <div id="compare-content"></div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="drawer-modal">
+    <div class="modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+        <strong id="drawer-title">Drawer</strong>
+        <button type="button" id="drawer-close">Close</button>
+      </div>
+      <div id="drawer-content"></div>
+    </div>
+  </div>
+
+  <script src="game-data.js"></script>
+  <script src="engine-claude.js"></script>
+  <script src="dynamics.js"></script>
+  <script src="view.js"></script>
+  <script src="studio.js"></script>
+  <script>window.FORK_STUDIO.init();</script>
+</body>
+</html>
